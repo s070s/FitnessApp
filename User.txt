@@ -1,4 +1,5 @@
 Do not include the "id" field when creating a new user. The "id" field is automatically incremented by the server.
+Additionally do not include the customer and trainer fields as they are related to foreign keys and are automatically set by the server.
 
 
 User
