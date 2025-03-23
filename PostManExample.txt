@@ -1,0 +1,44 @@
+API Testing
+
+
+Anatomy of a Request
+
+1.Type of http method
+GET gets data
+POST sends(creates) data
+PUT updates data
+DELETE deletes data
+
+2.https protocol usually but can be http
+
+3.localhost and port number defined in the launchSettings.json file
+localhost:7239
+
+3.url from Route attribute in the controller class(ex [Route("api/[controller]")] )
+where Controller is the name of the dbcontext variable related to the model class tied to the controller class
+(ex User is the model class UsersController is the controller and the configured dbcontext variable is Users which is used in the final url))
+
+4.Optional id depending on if its a method that works on all (example  getall vs on one item)
+
+Sequence of a request
+{MethodType}{2}{3}{4}{id}
+
+
+Examples(for UsersController)
+
+Gets all users
+GET https://localhost:7239/api/Users
+
+Gets the user with id 1(first user)
+GET https://localhost:7239/api/Users/1
+
+Creates a new user
+POST https://localhost:7239/api/Users
+
+Updates the user with id 1
+PUT https://localhost:7239/api/Users/1
+
+Deletes the user with id 1
+DELETE https://localhost:7239/api/Users/1
+
+

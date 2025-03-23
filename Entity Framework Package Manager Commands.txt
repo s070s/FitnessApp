@@ -1,0 +1,9 @@
+scaffold(database to c# code)
+Scaffold-DbContext "Data Source=../db/FitnessDB.db" -Provider Microsoft.EntityFrameworkCore.Sqlite -OutputDir Models -ContextDir Data -Context FitnessContext
+
+remove migrations(you should also remove created folders)
+dotnet ef migrations remove
+
+
+list migrations
+dotnet ef migrations list
